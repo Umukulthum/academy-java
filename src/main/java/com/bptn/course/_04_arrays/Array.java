@@ -17,9 +17,9 @@ public class Array {
 				if (numbers[i][j] > maxValue)
 					maxValue = numbers[i][j];
 			}
-			System.out.print("Maximum value on row " + i+1 + "is: " + maxValue);
+			System.out.println("Maximum value on row " + i+1 + " is: " + maxValue);
 			maxValue = 0;
 		}
-		
+
 	}
 }
