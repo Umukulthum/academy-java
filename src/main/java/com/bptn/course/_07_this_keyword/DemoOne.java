@@ -28,4 +28,5 @@ class Employee {
 	public void display() {
 		System.out.println("Name: " + this.name + ", Salary: " + this.salary);
 	}
+
 }
