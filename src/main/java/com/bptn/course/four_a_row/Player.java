@@ -28,11 +28,11 @@ public class Player {
 	}
 
 // create getter methods
-	public String getName() {
+	public String getPlayerName() {
 		return name;
 	}
 
-	public String getNumber() {
+	public String getPlayerNumber() {
 		return playerNumber;
 	}
 
