@@ -3,6 +3,9 @@ package com.bptn.course.four_a_row;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import com.bptn.course.four_a_row.exceptions.ColumnFullException;
+import com.bptn.course.four_a_row.exceptions.InvalidMoveException;
+
 public class Board {
 	// add instance variables
 	private String[][] board;
@@ -51,17 +54,17 @@ public class Board {
 		return true;
 	}
 
-	public boolean addToken(int colToAddToken, String playerNumber) {
+	public boolean addToken(int colToAddToken, String playerNumber) throws InvalidMoveException, ColumnFullException {
 
-//		if (colToAddToken > this.board[0].length - 1) {
-//            throw 
-//            new // complete line
-//            ("Column number exceeds number of columns on board. Columns go from 0 to " + (this.board[0].length - 1));
-//        }
-//
-//        if (columnFull(colToAddToken)) {
-//            // throw exception here.
-//        }
+		if (colToAddToken > this.board[0].length - 1) {
+			throw new InvalidMoveException("Column number exceeds number of columns on board. Columns go from 0 to "
+					+ (this.board[0].length - 1));
+		}
+
+		if (columnFull(colToAddToken)) {
+			throw new ColumnFullException(
+					"The column " + colToAddToken + " you are trying to place your token in is full");
+		}
 
 		int rowToAddToken = board.length - 1;
 
