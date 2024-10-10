@@ -1,4 +1,4 @@
-package com.bptn.course._22_everything_collections;
+package com.bptn.course.everything_collections;
 
 import java.util.HashSet;
 import java.util.Iterator;
